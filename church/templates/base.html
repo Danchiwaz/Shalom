@@ -1,0 +1,165 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+	
+	<title>
+		{% block title %} {% endblock %}
+	</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1">
+	<link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}">
+	<link rel="stylesheet" type="text/css" href="{% static 'css/owl.carousel.css' %}">
+	
+	<link href="https://fonts.googleapis.com/css2?family=Italianno&display=swap" rel="stylesheet">
+	<title>Shalom</title>
+	 <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/main.css">
+
+	
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	 <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+	 <link href="https://fonts.googleapis.com/css2?family=Lemonada:wght@500&display=swap" rel="stylesheet">
+	<!-- CSS only -->
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.1/css/bootstrap.min.css" integrity="sha384-VCmXjywReHh4PwowAiWNagnWcLhlEJLA5buUprzK8rxFgeH0kww/aWY76TfkUoSX" crossorigin="anonymous">
+
+<body  data-spy="scroll" data-target=".site-navbar-target" data-offset="300" style="scroll-behavior: smooth;">
+	<div class="container-fluid bg-secondary">
+	<div class="row">
+		<div class="col-md-4">
+			<div class="opening-hours">
+			<h6 class="contacttext pt-3 pb-3">Opening Hours<i class="material-icons">access_alarms</i> 10:00am - 1:00pm</h6>
+		</div>
+		</div>
+		<div class="col-md-8 d-flex justify-content-center align-items-center">
+			<div class="contacttext-icons">
+			<i class="material-icons" style="color: red">email</i><h6 class="text-warning">shalom@gmail.com</h6>
+			<i class="material-icons" style="color: green">call</i><h6 class="text-warning">+254 712-7472-09</h6>
+			
+		</div>
+		</div>
+	</div>
+	
+	
+</div>
+<nav class="navbar navbar-expand-md navbar-dark bg-dark sticky-top .site-navbar-target">
+	<a href="#" class="navbar-brand"><h4><i class="material-icons">favorite</i>Shalom Gospel Ministry</h4></a>
+	<button class="close navbar-toggler" data-toggle="collapse" data-target="#navbarcol">
+		<span class="navbar-toggler-icon"></span>
+	</button>
+	<div class="collapse navbar-collapse" id="navbarcol">
+		<ul class="navbar-nav ml-auto">
+			<li class="nav-item"><a href="{% url 'Index' %}" class="nav-link">Home</a></li>
+			<li class="nav-item"><a href="{% url 'aboutUs' %}" class="nav-link">About Us</a></li>
+			
+			<li class="nav-item"><a href="{% url 'sermons' %}" class="nav-link">Sermons</a></li>
+			<li class="nav-item"><a href="{% url 'member' %}" class="nav-link">Register</a></li>
+			<li class="nav-item"><a href="{% url 'contact' %}" class="nav-link">Contacts</a></li>
+			
+		</ul>
+		
+		
+	</div>
+
+			<button type="button" class="btn btn-danger btn-sm donation-btn" data-toggle="modal" data-target="#donations-modal">Donations</button>
+		
+	
+</nav>
+<!-- end of the navbar -->
+<!-- the modal for the donations -->
+<div class="modal fade show" id="donations-modal">
+	<div class="modal-dialog">
+		<div class="modal-content">
+			<div class="modal-header">
+				<h3 class="modal-header-title">M-PESA PAY BILL NO:</h3>
+				<button class="close" data-dismiss="modal">&times;</button>
+			</div>
+			<div class="modal-body">
+				<form action="{% url 'donations' %}" method="POST">
+                     {% csrf_token %}
+					<div class="form-group">
+						<label for="fname">FullName:</label>
+						<input type="text" name="fname" class="form-control" placeholder="Enter Your full name" required>
+					</div>
+					
+					<div class="form-group">
+						<label for="tel">Phone Number</label>
+						<input type="text" name="phone" class="form-control" placeholder="Enter Your phone" required>
+					</div>
+					<div class="form-group">
+						<label for="amount">Amount</label>
+						<input type="text" name="amount" class="form-control" placeholder="Enter amount" required>
+					</div>
+					<div class="form-group">
+						<label for="QRCode">M-pesa Code</label>
+						<input type="text" name="code" class="form-control" placeholder="Enter Mpesa code" required>
+					</div>
+					<button class="btn btn-primary" type="submit">Send</button>
+					
+				</form>
+			</div>
+		</div>
+		
+	</div>
+</div>
+
+<!-- end of the donations modal -->
+
+
+
+{% block content %}
+
+{% endblock %}
+
+
+
+{# news letter subscription #}
+
+<footer id="footer1">
+	<div class="container-fluid">
+		<div class="row">
+			<div class="col-md-4">
+				<h3 class="pt-4 pb-4" style="color: gold"><i class="material-icons">favorite</i>Shalom Gospel</h3>
+				<p class="text-muted">Thank your for visiting us and you can also reach out to our Socials for more information and impacts</p>
+				<div class="Socials">
+					<a href="https://www.fa-facebook.com/shalomgospelchurches/" target="_blank" class="pr-4"><i class="fab fa-facebook"></i></a>
+					
+					<a href="https://www.youtube.com/channel/UCeAHCTv4-CRGo175pt2t1hw" target="_blank"><i class="fab fa-youtube"></i></a>
+
+				</div>
+			</div>
+			<div class="col-md-3">
+				<h3 class="text-center text-light pt-4 pb-4">Quick links</h3>
+				<h5 class="text-center text-muted"><a href="{% url 'Index' %}" class="btn text-light"> <i class="fas fa-chevron-right"></i><i class="fas fa-chevron-right"></i>Home</a></h5>
+				<h5 class="text-center text-muted"><a href="#services" class="btn text-light"> <i class="fas fa-chevron-right"></i><i class="fas fa-chevron-right"></i>Services</a></h5>
+				<h5 class="text-center text-muted"><a href="{% url 'sermons' %}" class="btn text-light"> <i class="fas fa-chevron-right"></i><i class="fas fa-chevron-right"></i>Sermons</a></h5>
+				<h5 class="text-center text-muted"><a href="{% url 'contact' %}" class="btn text-light"> <i class="fas fa-chevron-right"></i><i class="fas fa-chevron-right"></i>Contact</a></h5>
+
+			</div>
+			<div class="col-md-5">
+				<h3 class="text-center text-light pt-4 pb-4">Contact Us</h3>
+				<h5 class="text-muted text-center"><span style="color: 
+			green;"><i class="fas fa-envelope-open-text"></i></span> P.O Box 2000-143</h5>
+			<h5 class="text-muted text-center"><span style="color: 
+			red;"><i class="fas fa-search-location"></i></span> Ndalu Bungoma County</h5>
+			<h5 class="text-muted text-center"><span style="color: 
+			red;"><i class="fas fa-envelope-open"></i></span> shalomgospelchurch2020@gmail.com</h5>
+
+			</div>
+		</div>
+	</div>
+	<div class="container-fluid" style="background-color: #050317;">
+		<p class="text-center text-light pt-2">Copyright&copy;2020 All rights reserved | <span style="color: crimson;">Shalom </span>Gospel Church INT'L</p>
+		
+	</div>
+</footer>
+
+<script type="text/javascript" src="{% static 'js/main.js' %}"></script>
+<script type="text/javascript" src="{% static 'js/owl.carousel.min.js' %}"></script>
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.1/js/bootstrap.min.js" integrity="sha384-XEerZL0cuoUbHE4nZReLT7nx9gQrQreJekYhJD9WNWhH8nEW+0c5qq7aIo2Wl30J" crossorigin="anonymous"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+</body>
+</html>

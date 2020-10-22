@@ -1,0 +1,389 @@
+@import url('https://fonts.googleapis.com/css2?family=Herr+Von+Muellerhoff&family=Lora:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Alata&display=swap');
+*{
+	list-style: none;
+	box-sizing: border-box;
+	margin: 0;
+	padding:0;
+}
+
+
+.contacticons{
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+
+}
+
+
+.opening-hours{
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	
+	border-right: 2px solid yellow;
+	padding-right: 2rem;
+}
+.nav-item:hover{
+	border-bottom: 2px solid gold;
+}
+.contacttext-icons{
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: row;
+}
+.contacttext{
+	color: gold;
+	border:1px solid 2px;
+
+}
+.donation-btn{
+	
+	background-color: crimson;
+	border-radius: 8px;
+}
+
+
+/*end of the nav
+/*the modal for donations*/
+ .modal-header-tilte{
+	color: green;
+}
+
+/*the end of the donations modal*/
+
+/*ministries*/
+.ministries{
+	border-radius: 8px;
+	background-color: white;
+	padding: 0.8rem;
+	opacity: 0.7px;
+	margin-top: -2rem;
+}
+.title2{
+	color: #c59d5f;
+}
+
+
+/*end of ministries*/
+
+/*start of caousel*/
+.carouselride{
+	height: 80vh;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+}
+.about-head{
+	color: crimson;
+	font-weight: 900;
+     position: relative;
+	/*font-family: 'Lemonada', cursive;*/
+	font-family: 'Italianno', cursive;
+}
+.about-head h4{
+		font-size: 5rem;
+		color: white;
+		text-align: center;
+		font-weight: 500;
+		animation: fadeup 2s forwards;
+		
+		transition: animation .6s;
+		opacity: 0;
+}
+.about-head .line{
+	height: 5px;
+	width: 10rem;
+	background-color: gold;
+	
+}
+
+.line-right{
+    position: absolute;
+    transform: translateY(-50%);
+    top: 50%; 
+
+    right: -1rem;
+    animation: rotate 1s forwards;
+}
+.line-left{
+	position: absolute;
+    transform: translateY(-50%);
+    top: 50%; 
+    left: -1rem;
+    opacity: 0;
+    animation: rotate 1s forwards;
+}
+.line-left::before{
+	content: '';
+	height: 3rem;
+	width: 3rem;
+	
+	background-color: black;
+	
+
+}
+.abouttext{
+	color: white;
+}
+.abouttext h1{
+	text-transform: uppercase;
+	
+	animation: fadedown 3s forwards;
+	font-weight: 600;
+}
+.carousel-btn{
+	text-align: center;
+}
+
+/*end of carousel*/
+
+
+/*about section*/
+.headers{
+	position: relative;
+	display: flex;
+	justify-content: center;
+	flex-direction: column;
+	align-items: center;
+}
+.headers h3{
+	font-weight: 900;
+	font-size: 2rem;
+	font-family: 'Lora', serif;
+	
+}
+.headers .headers-line{
+	height: 0.2rem;
+	width: 17rem;
+	background-color: #c59d5f;
+	position: absolute;
+	top: 2.6rem;
+}
+.headers .headers-icon{
+	color:  #c59d5f;
+	font-size: 1rem;
+	position: absolute;
+
+	top: 1.9rem;
+	
+}
+.icon {
+	text-align: center;
+
+
+}
+.icon i{
+	color: crimson;
+	font-size: 4rem;
+
+}
+/*testimonies section*/
+#testimonial .container-fluid{
+	padding: 100px;
+	background-color: #050526;
+}
+.carousel-inner .carousel-item .img-box{
+	height: 135px;
+	width: 135px;
+}
+.carousel-inner .carousel-item .img-box img{
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+}
+.carousel-control-prev{
+	left: -100px;
+}
+.carousel-control-next{
+	right: -100px;
+}
+.carousel-indicators{
+	top:330px;
+}
+
+/*end  of testimonies section*/
+
+
+/*upcoming events*/
+.event-pic{
+	
+	object-fit: cover;
+	border-radius: 6px;
+
+}
+.event-description{
+	display: flex;
+	align-items: center;
+	flex-direction: column;
+	justify-content: center;
+}
+.event-btn{
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+.btn-event{
+	color: crimson;
+	padding: 1rem 2rem;
+	background-color: transparent;
+	border:1px solid crimson;
+	text-decoration: none;
+	font-weight: 600;
+	transition: all 0.3s;
+
+}
+.btn-event:hover{
+	background-color: crimson;
+	color: white;
+
+
+}
+/*end of the upcomign events*/
+
+
+
+
+
+
+
+a{
+	text-decoration: none;
+
+}
+
+/*services section*/
+#services{
+	margin-top: 3rem;
+}
+/*end of services section*/
+
+/*contact information*/
+.contact-info{
+	background-color: #e6e8f0;
+	border-radius: 6px;
+	box-shadow: 1px 3px #888888;
+
+
+
+}
+.divider-contac{
+	border-left: 1rem gold;
+}
+.contact-header{
+	font-family: 'Alata', sans-serif;
+}
+.contact-form{
+	background-color: #4fd6a7
+}
+
+/*end of the contact information*/
+
+/*childrens home*/
+.carousel-item img{
+	border-radius: 6px;
+	object-fit: cover;
+	height: 400px;
+	width: 100%;
+	overflow: hidden;
+}
+
+
+/*end of the childrens home*/
+
+/*newsletter*/
+#newsletter{
+	background-color: #050924;
+}
+#footer1{
+	background-color: #02010d;
+}
+.Socials{
+	
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	
+}
+.Socials a i{
+	color: lightgrey;
+	font-size: 20px;
+}
+.Socials a i:hover{
+     color: crimson;
+     padding-right: 2rem;
+}
+/*end of the newletter*/
+
+
+
+
+
+
+/*media queries*/
+@media only screen and (max-width: 700px) {
+ .about-head .line{
+ 	display: none;
+ }
+ .carousel-indicators{
+	top:560px;
+}
+.carousel-control-prev{
+	left: -30px;
+}
+.carousel-control-next{
+	right: -3px;
+}
+}
+
+/*end of the media queries*/
+
+/*keyframes*/
+
+@keyframes fadeup{
+	0%{
+		transform: translateY(-100%);
+	}
+	20%{
+        opacity: 0.3;
+	}
+	40%{
+		opacity: 0.5;
+	}
+
+	100%{
+		opacity: 1;
+		transform: translateY(0);
+	}
+}
+
+
+
+@keyframes rotate{
+	0%{
+		transform: rotate(50deg);
+
+	}
+	100%{
+		opacity: 1;
+		transform: rotate(0);
+	}
+}
+@keyframes fadedown{
+	0%{
+		opacity: 0;
+		transform: translateY(100%);
+	}
+	20%{
+        opacity: 0.3;
+	}
+	40%{
+		opacity: 0.5;
+	}
+
+	100%{
+		opacity: 1;
+		transform: translateY(0);
+	}
+}

@@ -1,0 +1,75 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}Registration{% endblock %}
+
+
+{% block content %}
+
+<div class="container">
+	<div class="row">
+		<div class="col-md-8">
+			{% if messages %}
+							   {% for message in messages%}
+							   	      <div class="alert alert-dismissable alert-danger mt-4">
+							   	      	<button type="button" class="close" data-dismiss="alert">&times;</button>
+							   	      	{{message}}
+							   	      </div>
+							   {% endfor %}
+								
+							{% endif %}
+			<form action="{% url 'member' %}" method="POST">
+								{% csrf_token %}
+									
+									<div input-group>
+										<label>FirstName:</label>
+										<div class="input-group-append">
+											<p class="input-group-text"><i class="material-icons">person</i></p>
+											<input type="text" name="fname" class="form-control" required>
+										</div>
+										
+									</div>
+									<div input-group>
+										<label>LastName:</label>
+										<div class="input-group-append">
+											<p class="input-group-text"><i class="material-icons">person</i></p>
+											<input type="text" name="lname" class="form-control" required>
+										</div>
+										
+									</div>
+									<div input-group>
+										<label>Location:</label>
+										<div class="input-group-append">
+											<p class="input-group-text"><i class="material-icons">location_searching</i></p>
+											<input type="text" name="location" class="form-control" required>
+										</div>
+										
+									</div>
+									<div input-group>
+										<label>Phone:</label>
+										<div class="input-group-append">
+											<p class="input-group-text"><i class="material-icons">call</i></p>
+											<input type="text" name="phone" class="form-control" required>
+										</div>
+										
+									</div>
+									<div input-group>
+										<label>Email:</label>
+										<div class="input-group-append">
+											<p class="input-group-text"><i class="material-icons">email</i></p>
+											<input type="text" name="email" class="form-control">
+										</div>
+										
+									</div>
+									<button type="submit" class="btn btn-primary mt-4 mb-4">Submit</button>
+								
+							</form>
+		</div>
+		<div class="col-md-4">
+			<img src="{% static 'images/personal.png' %}" height="400" width="100%">
+		</div>
+		
+	</div>
+</div>
+
+{% endblock %}

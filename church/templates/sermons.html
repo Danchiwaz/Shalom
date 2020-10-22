@@ -1,0 +1,47 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %} Sermons{% endblock %}
+
+
+{% block content %}
+<!-- sermons section -->
+<div class="container-fluid">
+	<ul class="breadcrumb">
+		<li class="breadcrumb-item"><a href="{% url 'Index' %}"><i class="fas fa-home"></i> Home</a></li>
+		<li class="breadcrumb-item active"><a href="{% url 'sermons' %}">Sermons</a></li>
+	</ul>
+</div>
+<section id="sermons" style="background-color: lightgrey; padding-top: 2rem; padding-bottom: 2rem">
+	<div class="headers mb-4">
+		<div class="headers-line "></div>
+				<h3 class="text-muted"><span style="color: crimson;">Shalom </span>Gospel Church Latest Sermons</h3>
+				<div class="headers-icon"><i class="fa fa-cog fa-spin"></i></div>
+			</div>
+			<div class="container-fluid">
+				<div class="row">
+					{% for ser in sermon %}
+					<div class="col-md-4 col-sm-12">
+						
+                             <div class="card">
+							<img src="{{ser.img.url}}" class="img-fluid card-img-top">
+							<div class="card-body">
+								<h5 class="text-muted">{{ser.topic}}</h5>
+								<p class="text-muted"><i class="fas fa-user-alt" style="color: crimson;"></i><span class="text-italic">Sermon from: {{ser.minister}}<span</p>
+								 <p class="text-muted"><i class="fa fa-tag" aria-hidden="true" style="color: crimson;"></i> Categories: <span> {{ser.category}}</span></p>
+								<p class="text-muted"><i class="fa fa-clock-o" aria-hidden="true" style="color: crimson;"></i> Date: {{ser.date}}</p>
+								<a href="{{ser.link}}" class="btn btn-danger" target='_blank'>Watch</a>
+							</div>
+						</div>
+						
+						
+					</div>
+					{% endfor %}
+
+					
+
+				</div>
+			</div>
+</section>
+<!-- end of sermons section -->
+{% endblock %}

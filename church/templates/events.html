@@ -1,0 +1,49 @@
+{% extends 'base.html' %}
+{% load static %}
+
+
+{% block title %}Events{% endblock %}
+
+
+{% block content %}
+<div class="container-fluid mt-2">
+	<ul class="breadcrumb">
+		<li class="breadcrumb-item"><a href="{% url 'Index' %}"><i class="fas fa-home"></i> Home</a></li>
+		<li class="breadcrumb-item active"><a href="{% url 'upcoming' %}">Events</a></li>
+	</ul>
+</div>
+     
+     {% for event in events %}
+
+	<div class="container mt-3 mb-3">
+
+		<div class="row">
+              {% if event.img %}
+              	<div class="col-md-3">
+				<img src="{{event.img.url}}" class="img-fluid event-pic" style="height: 300px; width: 100%;">
+			</div>
+			    {% else %}
+			    <div class="col-md-3">
+				<img src="{% static 'images/event-5.jpg' %}" class="img-fluid event-pic" style="height: 300px; width: 100%;">
+			</div>
+              {% endif %}
+			    
+			
+			<div class="col-md-7 event-description">
+				<h4>{{event.theme}}</h4>
+				<p class="text-muted">
+					<span class="pr-3"><i class="fas fa-calendar-alt" style="color: crimson;"></i> {{event.day_of_event}}</span>
+					<span class="pr-3"><i class="fas fa-clock" style="color: crimson;"></i>{{event.time_of_event}}</span> 
+					<span class="pr-3"><i class="fas fa-search-location" style="color: crimson;"></i>{{event.venue}}
+					</span>
+				</p>
+				<p> {{event.description}}</p>
+
+			</div>
+			
+		</div>
+	</div>
+			{% endfor %}
+   
+	
+{% endblock %}

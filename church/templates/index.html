@@ -1,0 +1,376 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %} Home{% endblock %}
+
+{% block content %}
+{% if messages %}
+ {% for message in messages %}
+ 	  <div class="container mt-3 mb-2">
+ 	  	<div class="alert alert-dismissable alert-success">
+ 	  		<button type="button" class="close" data-dismiss="alert">&times;</button>
+ 	  		{{message}}
+ 	  	</div>
+ 	  </div>
+ {% endfor %}
+	
+{% endif %}
+<!-- carousel start -->
+<div class="container-fluid carouselride" style=" background-image:linear-gradient(to right,rgba(0,0,0,0.8), rgba(0,0,0,0.73)), url({% static 'images/bg_5.jpg' %});background-size: cover;">
+	<div class="carouselride-text">
+		<div class="about-head">
+			<div class="line line-left"></div>
+			<h4>Shalom Gospel</h4>
+			<div class="line line-right"></div>
+		</div>
+		<div class="abouttext">
+			<h1>We love God And we Belive in God</h1>
+		</div>
+		<div class="carousel-btn">
+		 <button class="btn btn-danger ">About Us</button>
+		 <a href="{% url 'sermons' %}" class="btn btn-danger">Sermons</a>	
+		</div>
+		
+	</div>
+</div>
+<!-- end of cousel -->
+<!-- about section -->
+<section id="about" class="mt-3">
+	<div class="container">
+	<div class="row">
+		<div class="col-md-5">
+			<img src="{% static 'images/bg_2.jpg' %}" class="img-fluid">
+		</div>
+		<div class="col-md-7 about-section">
+			<div class="headers">
+				<div class="headers-line"></div>
+				<h3 class="text-muted">Welcome to <span style="color: crimson;">Shalom </span>Gospel Church INT'L</h3>
+				<div class="headers-icon"><i class="fa fa-cog fa-spin"></i></div>
+			</div>
+			<div class="about-text">
+				 <p>Far far away,<strong>creative</strong> behind the word mountains, far from the countries Vokalia and Consonantia, there live the <strong>success</strong> blind texts. Separated they live in Bookmarksgrove</p>
+              <p>A small river named Duden flows by their place and supplies it with the necessary regelialia. It is a paradisematic country, in which roasted parts of sentences fly into your mouth.</p>
+			</div>
+			<a href="{% url 'registration' %}" class="btn btn-danger pr-4 pl-4"><span class="spinner-grow spinner-grow-sm"></span> Become a Member</a>
+			
+		</div>
+	</div>
+</div>
+</section>
+<!-- end of about section -->
+<hr style="background-color: lightgrey">
+
+<!-- services section -->
+<section id="services">
+	
+		
+	
+	<div class="headers mb-4">
+		<div class="headers-line "></div>
+				<h3 class="text-muted"><span style="color: crimson;">Shalom </span>Gospel Church INT'L Services</h3>
+				<div class="headers-icon"><i class="fa fa-cog fa-spin"></i></div>
+			</div>
+	<div class="container">
+		<div class="row">
+			<div class="col-md-4">
+				<div class="icon">
+					<i class="fas fa-praying-hands"></i>
+				</div>
+					<h3 class="text-center">Daily Prayers</h3>
+				
+				<p class="text-justify text-muted"> ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+				tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+				quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+				consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+				cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+				proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+			</div>
+
+			<div class="col-md-4">
+				<div class="icon">
+					<i class="fas fa-bible"></i>
+				</div>
+					<h3 class="text-center">Continuos Teaching</h3>
+				
+				<p class="text-justify text-muted"> ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+				tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+				quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+				consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+				cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+				proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+			</div>
+
+			<div class="col-md-4">
+				<div class="icon">
+					<i class="fas fa-ring"></i>
+				</div>
+					<h3 class="text-center">Weddings</h3>
+				
+				<p class="text-justify text-muted"> ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+				tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+				quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+				consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+				cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+				proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+			</div>
+
+			
+		</div>
+	</div>
+</section>
+
+<!-- end of serveives section -->
+
+
+
+
+<!-- testimonies-->
+<section id="testimonial">
+	<div class="container-fluid">
+		<div class="row">
+			<div class="col-md-12">
+				<!-- title text -->
+				<!-- <h2 class="text-center title text-dark"><strong>Testimonies</strong></h2> -->
+				<div class="headers mb-4">
+		<div class="headers-line "></div>
+				<h3 class="text-muted">Testimonies</h3>
+				<div class="headers-icon"><i class="fa fa-cog fa-spin"></i></div>
+			</div>
+
+				<!-- carousel begins -->
+				<div class="carousel slide" id="my-carousel" data-ride="carousel">
+					<ol class="carousel-indicators">
+						<li data-target="#my-carousel" data-slide-to="0"></li>
+						<li data-target="#my-carousel" data-slide-to="1" class="active"></li>
+						<li data-target="#my-carousel" data-slide-to="2"></li>
+					</ol>
+
+					<div class="carousel-inner">
+						<!-- slider 1 -->
+						<div class="carousel-item text-center">
+
+							<div class="img-box border rounded-circle m-auto">
+								<img src="{% static 'images/person_1.jpg' %}" class="d-block w-100 rounded-circle">
+							</div>
+							<h5 class="my-1 py-1"><strong class="text-warning text-uppercase">Daniel Maina</strong></h5>
+							<h6 class="text-dark m-1">Member</h6>
+							<p class="pt-3 text-white">ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+							tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+							quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+							consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+							cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+							proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+						</div>
+						<!-- slider 2 -->
+						<div class="carousel-item text-center active">
+							<div class="img-box border rounded-circle m-auto">
+								<img src="{% static 'images/person_2.jpg' %}" class="d-block w-100 rounded-circle">
+							</div>
+							<h5 class="my-1 py-1"><strong class="text-warning text-uppercase">Mary Mwikali</strong></h5>
+							<h6 class="text-dark m-1">Member</h6>
+							<p class="pt-3 text-white">ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+							tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+							quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+							consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+							cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+							proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+						</div>
+						<!-- slider 3 -->
+						<div class="carousel-item text-center">
+							<div class="img-box border rounded-circle m-auto">
+								<img src="{% static 'images/person_3.jpg' %}" class="d-block w-100 rounded-circle">
+							</div>
+							<h5 class="my-1 py-1"><strong class="text-warning text-uppercase">Naftaly Muchuki</strong></h5>
+							<h6 class="text-dark m-1">Member</h6>
+							<p class="pt-3 text-white">ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+							tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+							quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+							consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+							cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+							proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+						</div>
+						
+					</div>
+
+					<!-- carousel controls -->
+					<a href="#my-carousel" role="button" class="carousel-control-prev" data-slide=
+					"prev">
+						<span class="carousel-control-prev-icon"></span>
+						<span class="sr-only">Previous</span>
+					</a>
+					<a href="#my-carousel" role="button" class="carousel-control-next" data-slide=
+					"prev">
+						<span class="carousel-control-next-icon"></span>
+						<span class="sr-only">Previous</span>
+					</a>
+				</div>
+				<!-- end of the carousel -->
+			</div>
+		</div>
+	</div>
+</section>
+
+   
+
+
+<!-- end of testimonies -->
+<!-- upcoming events -->
+<section id="events" class="mt-3">
+	<div class="headers mb-3">
+		<div class="headers-line "></div>
+				<h3 class="text-muted">Upcoming <span style="color: crimson;">Events</span></h3>
+				<div class="headers-icon"><i class="fa fa-cog fa-spin"></i></div>
+			</div>
+
+
+	<div class="container mt-3 mb-3">
+		<div class="row">
+			<div class="col-md-3">
+				<img src="{{events.img.url}}" class="img-fluid event-pic" style="height: 300px; width: 100%;">
+			</div>
+			<div class="col-md-5 event-description">
+				<h4>{{events.theme}}</h4>
+				<p class="text-muted">
+					<span class="pr-3"><i class="fas fa-calendar-alt" style="color: crimson;"></i> {{events.day_of_event}}</span>
+					<span class="pr-3"><i class="fas fa-clock" style="color: crimson;"></i> {{events.time_of_event}}</span> 
+					<span class="pr-3"><i class="fas fa-search-location" style="color: crimson;"></i> {{event.venue}}
+					</span>
+				</p>
+				<p> {{events.description|truncatewords:30}}<a href="{% url 'upcoming' %}" class="btn btn-danger btn-sm ml-2">See More</a></p>
+				
+
+			</div>
+			<div class="col-md-4">
+				<h3 class=" text-muted text-center"  style="font-style: italic;"> Daily Juice <span class="text-danger">Devotion </span></h3>
+				<div class="jumbotron pt-2 pb-2">
+					<h4 class="text-center">1 Thessalonians 2:11-12</h4>
+					<p>
+						 “For you know that we dealt with each of you as a father deals with his own children, encouraging, comforting and urging you to live lives worthy of God, who calls you into his kingdom and glory.”
+					</p>
+				</div>
+
+			</div>
+		</div>
+	</div>
+</section>
+
+
+<!-- end of the upcoming events -->
+
+{# childrens home  #}
+<section class="mb-4">
+	<div class="headers mb-3">
+		<div class="headers-line "></div>
+				<h3 class="text-muted"">Eliam <span style="color: crimson;"> Childrens</span> Home</h3>
+				<div class="headers-icon"><i class="fa fa-cog fa-spin"></i></div>
+			</div>
+
+	<div class="container">
+		<div class="row">
+			<div class="col-md-8">
+		<div class="carousel slide" data-ride="carousel" id="children-photos">
+			<ul class="carousel-indicators">
+				<li data-target = "#children-photos" data-slide-to = "0" class="active"></li>
+				<li data-target = "#children-photos" data-slide-to = "1"></li>
+				<li data-target = "#children-photos" data-slide-to = "2"></li>
+			</ul>
+			<div class="carousel-inner">
+				<div class="carousel-item active">
+					<img src="{% static 'images/cause-1.jpg' %}">
+					<div class="carousel-caption">
+						<h4>Childrens Home</h4>
+					</div>
+				</div>
+
+				<div class="carousel-item">
+					<img src="{% static 'images/cause-2.jpg' %}">
+					<div class="carousel-caption">
+						<h4>Childrens Home</h4>
+					</div>
+				</div>
+
+				<div class="carousel-item">
+					<img src="{% static 'images/cause-3.jpg' %}">
+					<div class="carousel-caption">
+						<h4>Childrens Home</h4>
+					</div>
+				</div>
+
+				<div class="carousel-item">
+					<img src="{% static 'images/cause-4.jpg' %}">
+					<div class="carousel-caption">
+						<h4>Childrens Home</h4>
+					</div>
+				</div>
+			</div>
+			{# controls #}
+			<a href="#children-photos" class="carousel-control-prev" data-slide="prev">
+				<span class="carousel-control-prev-icon"></span>
+			</a>
+			<a href="#children-photos" class="carousel-control-next" data-slide="next">
+				<span class="carousel-control-next-icon"></span>
+			</a>
+		</div>
+	</div>
+	<div class="col-md-4">
+			<div class="child-description">
+				<h3>Touching the Lives of the Needy</h3>
+				<p class="text-muted">dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+				tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+				quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+				consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+				cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+				proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+				<div class="event-btn">
+				<div>
+					<button type="button" class="btn btn-danger btn-lg donation-btn" data-toggle="modal" data-target="#donations-modal">Make a Donation</button>
+				</div>
+			</div>
+			</div>
+		</div>
+	<div>
+		
+	</div>
+		</div>
+	
+</div>
+</section>
+
+
+{# end of the childrens home #}
+
+<section id="newsletter">
+	<div class="container">
+		<div class="row">
+			<div class="col-md-6 d-flex justify-content-center align-items-center">
+				<h3 class="text-center pt-3 pb-3" style="color: crimson;">Subscribe to Our Newsletter</h3>
+
+			</div>
+			<div class="col-md-6 d-fle justify-content-center align-items-center">
+				<form action="{% url 'subscription' %}" class="form-inline pt-3 pb-3" method="POST">
+					{% csrf_token %}
+					<div class="form-group mr-4">
+						<input type="text" class="form-control" name="email" placeholder="enter your email">
+					</div>
+					<button class="btn btn-danger mr-4" type="submit">Subscribe</button>
+				</form>
+			</div>
+		</div>
+	</div>
+</section>
+
+
+{# end of the subscription section #}
+{% endblock %}
+
+
+
+<!-- JS, Popper.js, and jQuery -->
+
+
+</body>
+</html>
+
+
+
+

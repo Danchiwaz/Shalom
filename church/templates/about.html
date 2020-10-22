@@ -1,0 +1,62 @@
+{% extends 'base.html' %}
+{% load static %}
+
+
+{% block title %}About Us{% endblock %}
+
+{% block content %}
+
+<div class="container" style="margin-top: 3rem; margin-bottom: 3rem">
+	<div class="row">
+		<div class="col-md-4">
+			<ul class="nav nav-pills flex-column">
+				<li class="nav-item">
+					<a href="#name" class="nav-link active" data-toggle="pill">Name</a>
+				</li>
+				<li class="nav-item ">
+					<a href="#mission" class="nav-link " data-toggle="pill">Mission</a>
+				</li>
+				<li class="nav-item">
+					<a href="#vision" class="nav-link" data-toggle="pill">Vision</a>
+				</li>
+				<li class="nav-item">
+					<a href="#objectives" class="nav-link" data-toggle="pill">Objectives</a>
+				</li>
+			</ul>
+		</div>
+		<div class="col-md-8">
+			<div class="tab-content">
+				<div class="tab-pane container active" id="name">
+					<h3 class="text-danger">Name</h3>
+					<p class="text-muted"><i class="fas fa-dot-circle" style="color: crimson;"></i>  The name shall be JESUS IS THE LORD MINISTRY(JITLM)in this constitution referred to as the ministry,is international,non-political,non-profit making,Christian fellowship of belivers who uphold the bible as true and inspired by word of god</hp>
+				</div>
+				<div class="tab-pane container" id="vision">
+					<h4 class="text-danger">Vision</h4>
+					<p><i class="fas fa-dot-circle" style="color: crimson;"></i>  ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+					tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+					quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+					consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+					cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+					proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+				</div>
+				<div class="tab-pane container" id="mission">
+					<h4 class="text-danger">Mission</h4>
+					<p class="text-muted"><i class="fas fa-dot-circle" style="color: crimson;"></i>  ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+					tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+					quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+					consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+					cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+					proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+				</div>
+				<div class="tab-pane container" id="objectives">
+					<h4 class="text-danger">Objectives</h4>
+					<p class="text-muted"><i class="fas fa-dot-circle" style="color: crimson;"></i>  To keep commandments of the Holy scripture,Evangelize to souls according to the mandate of Jesus Christ.Go into the World and preach the Gospel to every creature <span style="font-style: italic; color: crimson"> (mk 16:15)</span> edify the body of christ</p>
+					<p class="text-muted"><i class="fas fa-dot-circle" style="color: crimson;"></i>  Promote evangelist and Church planting.Knowledge,spread and study the holy scripture within Kenya and abroad.All churches established and affliated to <abbr title="Jesus is the Lord Ministry">J.I.T.L.M</abbr> shall be known as Shalom Churches international</p>
+					<p class="text-muted"><i class="fas fa-dot-circle" style="color: crimson;"></i>  Develope Christian activities and humanities assistance.</p>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+{% endblock %}
